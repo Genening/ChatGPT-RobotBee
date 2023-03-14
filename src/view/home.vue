@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <el-container height="100%">
-      <el-aside width="100px">
+    <el-container style="height:100%;">
+      <el-aside style="width:100px; height: 100%; background-color: rgba(31, 33, 42); box-shadow: 1px 0px 4px 0px black;">
         <Nav></Nav>
       </el-aside>
-      <el-main>
+      <el-main class="height:100%;">
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -25,7 +25,7 @@ export default {
 .home {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(39, 42, 55);
+  background-color: rgb(31, 33, 43);
   // border-radius: 15px;
   position: absolute;
   left: 50%;

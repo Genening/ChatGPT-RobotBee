@@ -15,6 +15,9 @@
         <label for="imgFile">
           <span class="iconfont icon-tupian"></span>
         </label>
+        <!-- <label @click="this.handleSetting">
+          <span class="iconfont icon-shezhi"></span>
+        </label> -->
         <input
           type="file"
           name=""
@@ -123,7 +126,7 @@
         </div>
         <!--输入框-->
         <!-- <input /> -->
-        <textarea id="textareaMsg" class="inputs" style="z-index: 9999999999;min-height: 50px;max-height:400px;max-width: 65%;min-width: 65%;"    maxlength="2000" rows="3" dir autocorrect="off" aria-autocomplete="both" spellcheck="false" autocapitalize="off" autocomplete="off" v-model="inputMsg" @keyup.enter="sendText"  ></textarea>
+        <textarea id="textareaMsg" class="inputs" style="z-index: 9999999999;min-height: 50px;max-height:400px;max-width: 80%;min-width: 60%;"    maxlength="2000" rows="3" dir autocorrect="off" aria-autocomplete="both" spellcheck="false" autocapitalize="off" autocomplete="off" v-model="inputMsg" @keyup.enter="sendText"  ></textarea>
         <!--发送-->
         <div v-if="acqStatus">
           <div class="send boxinput" @click="sendText" >
@@ -158,6 +161,10 @@ export default {
   props: {
     settingInfo: Object,
     frinedInfo: Object,
+    // handleSetting: {
+    //   type: Function,
+    //   require: true,
+    // },
     default() {
       return {};
     },
@@ -567,7 +574,7 @@ textarea::-webkit-scrollbar-thumb {
   }
   .botoom {
     width: 100%;
-    height: 74vh;
+    height: 85vh;
     background-color: rgb(50, 54, 68);
     border-radius: 20px;
     padding: 20px;
@@ -688,6 +695,7 @@ textarea::-webkit-scrollbar-thumb {
       bottom: 0;
       margin: 3%;
       display: flex;
+      justify-content: space-between;
       .boxinput {
         width: 50px;
         height: 50px;
@@ -714,7 +722,7 @@ textarea::-webkit-scrollbar-thumb {
       }
 
       .inputs {
-        width: 65%;
+        width: 80%;
         height: 50px;
         background-color: rgb(66, 70, 86);
         border-radius: 15px;

@@ -1,8 +1,12 @@
 <template>
   <div class="chatHome">
-    <div class="chatLeft" style="width:24%">
+    <!-- 左侧模型列表 -->
+    <div class="chatLeft-Right" style="width:20%;">
       <div class="title">
         <h1>学习助手</h1>
+        <label @click="this.handleSetting" style="cursor:pointer;">
+          <span class="iconfont icon-shezhi"></span>
+        </label>
       </div>
       <div class="online-person" style="margin-top: 5%;"> 
         <span class="onlin-text">模型列表</span>
@@ -22,7 +26,8 @@
         </div>
       </div>
     </div>
-    <div class="chatRight">
+    <!-- 中间对话框 -->
+    <div class="chatMiddle">
       <!-- <router-view></router-view> -->
       <div v-if="showChatWindow">
         <ChatWindow
@@ -31,19 +36,20 @@
           @personCardSort="personCardSort"
         ></ChatWindow>
       </div>
-      <div class="showIcon" v-else>
-        <!-- <span class="iconfont icon-snapchat"></span> -->
+      <!-- <span class="iconfont icon-snapchat"></span> -->
+      <!-- <div class="showIcon" v-else>
         <img style="width:200px; border-radius: 16px; opacity: 0.5;" src="@/assets/img/snapchat.png" />
-      </div>
+      </div> -->
     </div>
-    <div class="chatLeft">
-     
+    <!-- 右侧内容框 -->
+    <div v-show="setting" class="chatLeft-Right">
+      <div>
         <el-card shadow="hover" id="jianbian" style="line-height: 120%;text-align: left;">
             总余额：${{ this.moneryInfo.totalGranted | numFilterReservedTwo }}<br/>
             消耗余额：${{ moneryInfo.totalUsed | numFilterReservedSix }}<br/>
             可用余额：${{ this.moneryInfo.totalAvailable | numFilterReservedSix }}<br/>
         </el-card>
-     
+      </div>
       <div class="online-person">
         <span class="setting" @click="SettingStatus=0" :class="{ active: SettingStatus === 0 }">对话</span>
         <span class="setting" @click="SettingStatus=1" :class="{ active: SettingStatus === 1 }">图片</span>
@@ -173,6 +179,7 @@ export default {
         totalAvailable:0
       },
       //全部的设置参数
+      setting: false,
       SettingInfo:{
         KeyMsg:"",
         MaxTokens:1000,
@@ -191,7 +198,7 @@ export default {
       //模型列表缓存
       personListCache: [],
       //是否显示聊天窗口
-      showChatWindow: false,
+      showChatWindow: true,
       //当前窗口的对话模型信息
       chatWindowInfo: {},
       imgSizes: [{
@@ -279,6 +286,9 @@ export default {
         this.personList.unshift(nowPersonInfo);
       }
     },
+    handleSetting() {
+      this.setting = !this.setting;
+    }
   },
 };
 </script>
@@ -352,22 +362,33 @@ export default {
 .chatHome {
   // margin-top: 20px;
   display: flex;
-  .chatLeft {
+  height: 100%;
+  // gap: 5px;
+  .chatLeft-Right {
     width: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
     .title {
+      display: flex;
+      gap:10px;
+      align-items: center;
       color: #fff;
       padding-left: 10px;
     }
     .online-person {
       margin-top: 10%;
+      height: 90vh;
       .onlin-text {
-        margin-left: 35%;
+        // margin-left: 35%;
+        font-size: 18px;
         padding-left: 10px;
         color: rgb(176, 178, 189);
       }
       .s-wrapper {
         padding-left: 10px;
-        height: 65vh;
+        height: 75vh;
         margin-top: 10px;
         overflow: hidden;
         overflow-y: scroll;
@@ -381,9 +402,10 @@ export default {
     }
   }
 
-  .chatRight {
+  .chatMiddle {
     flex: 1;
     padding-right: 30px;
+    height: 100%;
     .showIcon {
       position: absolute;
       top: calc(50% - 150px); /*垂直居中 */
