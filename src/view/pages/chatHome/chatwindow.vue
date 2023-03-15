@@ -281,7 +281,7 @@ export default {
       if (this.inputMsg) {
         let chatMsg = {
           headImg: require("@/assets/img/head.png"),
-          name: "小hey",
+          name: "",
           time: dateNow,
           msg: this.inputMsg,
           chatType: 0, //信息类型，0文字，1图片
@@ -370,7 +370,7 @@ export default {
       const dateNow=JCMFormatDate(getNowTime());
       let chatMsg = {
         headImg: require("@/assets/img/head.png"),
-        name: "小hey",
+        name: "",
         time: dateNow,
         msg: msg,
         chatType: 1, //信息类型，0文字，1图片
@@ -417,7 +417,7 @@ export default {
 
       let chatMsg = {
         headImg: require("@/assets/img/head.png"),
-        name: "小hey",
+        name: "",
         time: dateNow,
         msg: "",
         chatType: 1, //信息类型，0文字，1图片, 2文件
@@ -461,7 +461,7 @@ export default {
       const dateNow=JCMFormatDate(getNowTime());
       let chatMsg = {
         headImg: require("@/assets/img/head.png"),
-        name: "小hey",
+        name: "",
         time: dateNow,
         msg: "",
         chatType: 2, //信息类型，0文字，1图片, 2文件
@@ -630,7 +630,7 @@ textarea::-webkit-scrollbar-thumb {
               margin-right: 10px;
             }
             span:last-child {
-              color: rgb(101, 104, 115);
+              color: rgb(255, 255, 255);
               margin-left: 10px;
               vertical-align: middle;
             }
