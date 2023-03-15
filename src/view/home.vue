@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <el-container style="height:100%;">
-      <el-aside style="width:100px; height: 100%; background-color: rgba(31, 33, 42); box-shadow: 1px 0px 4px 0px black;">
+      <!-- <el-aside style="width:80px; height: 100%; background-color: rgba(31, 33, 42, 0.5); box-shadow: 1px 0px 4px 0px rgba(31, 33, 42, 0.5);">
         <Nav></Nav>
-      </el-aside>
+      </el-aside> -->
       <el-main class="height:100%;">
         <router-view></router-view>
       </el-main>
