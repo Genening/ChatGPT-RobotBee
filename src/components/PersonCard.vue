@@ -1,12 +1,11 @@
 <template>
   <div class="person-card" :class="{ activeCard: personInfo.id == current }">
     <div class="info">
-          <HeadPortrait :imgUrl="personInfo.headImg"></HeadPortrait>
-          <div class="info-detail">
-            <div class="name">{{ truncateString(personInfo.name, 17) }}</div>
-            <div class="detail">{{ personInfo.lastMsg }}</div>
-          </div>
-
+      <HeadPortrait :imgUrl="personInfo.headImg" style="min-w-[60px]" />
+      <div class="info-detail">
+        <!-- <div class="name">{{ truncateString(personInfo.name, 17) }}</div> -->
+        <div class="detail">{{ personInfo.lastMsg }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -56,7 +55,7 @@ export default {
   width: 100%;
   height: 80px;
   border-radius: 10px;
-  background-color: rgb(50, 54, 68);
+  background-color: rgba(50, 54, 68, 0.5);
   position: relative;
   margin: 25px 0;
   cursor: pointer;
@@ -71,6 +70,8 @@ export default {
     .info-detail {
       margin-top: 5px;
       margin-left: 20px;
+      max-width: 70%;
+      overflow: hidden;
       .name {
         color: #fff;
         overflow: hidden;
@@ -79,11 +80,11 @@ export default {
         margin-bottom: 5px;
       }
       .detail {
-        color: #5c6675;
+        color: #ffffff;
         overflow: hidden;
-        white-space: nowrap;
+        white-space: break-spaces;
         text-overflow: ellipsis;
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }

@@ -25,7 +25,8 @@ export default {
 .home {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(31, 33, 43);
+  // background-color: rgb(31, 33, 43);
+  background: linear-gradient(rgb(92, 116, 204) 0%, rgb(82, 105, 190) 140px, rgb(41, 63, 135) 640px, rgb(33, 52, 122) max(100vh, 700px), rgb(33, 52, 122) 100%);
   // border-radius: 15px;
   position: absolute;
   left: 50%;

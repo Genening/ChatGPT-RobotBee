@@ -19,6 +19,7 @@
 
 .icon-wenjian:before {
   content: "\e62e";
+  color: white;
 }
 
 .icon-gf-telephone:before {
@@ -27,6 +28,7 @@
 
 .icon-tupian:before {
   content: "\e610";
+  color: white;
 }
 
 .icon-shipin:before {
@@ -39,6 +41,7 @@
 
 .icon-shezhi:before {
   content: "\e8b8";
+  color: white;
 }
 
 .icon-xinxi:before {

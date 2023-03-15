@@ -126,7 +126,7 @@
         </div>
         <!--输入框-->
         <!-- <input /> -->
-        <textarea id="textareaMsg" class="inputs" style="z-index: 9999999999;min-height: 50px;max-height:400px;max-width: 80%;min-width: 60%;"    maxlength="2000" rows="3" dir autocorrect="off" aria-autocomplete="both" spellcheck="false" autocapitalize="off" autocomplete="off" v-model="inputMsg" @keyup.enter="sendText"  ></textarea>
+        <textarea id="textareaMsg" class="inputs" style="z-index: 9999999999;min-height: 55px;max-height:400px;max-width: 80%;min-width: 60%;"    maxlength="2000" rows="3" dir autocorrect="off" aria-autocomplete="both" spellcheck="false" autocapitalize="off" autocomplete="off" v-model="inputMsg" @keyup.enter="sendText"  ></textarea>
         <!--发送-->
         <div v-if="acqStatus">
           <div class="send boxinput" @click="sendText" >
@@ -575,7 +575,7 @@ textarea::-webkit-scrollbar-thumb {
   .botoom {
     width: 100%;
     height: 85vh;
-    background-color: rgb(50, 54, 68);
+    background-color: rgba(241, 241, 241, 0.144);
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box;
@@ -606,10 +606,10 @@ textarea::-webkit-scrollbar-thumb {
             max-width: 90%;
             padding: 20px;
             border-radius: 20px 20px 20px 5px;
-            background-color: rgb(56, 60, 75);
+            background-color: rgba(56, 60, 75, 0.418);
             color: #fff;
             &:hover {
-              background-color: rgb(39, 42, 55);
+              background-color: rgba(39, 42, 55, 0.476);
             }
           }
           .chat-img {
@@ -650,7 +650,7 @@ textarea::-webkit-scrollbar-thumb {
             max-width: 90%;
             padding: 20px;
             border-radius: 20px 20px 5px 20px;
-            background-color: rgb(29, 144, 245);
+            background-color: rgba(29, 144, 245, 0.377);
             color: #fff;
             &:hover {
               background-color: rgb(26, 129, 219);
@@ -681,7 +681,7 @@ textarea::-webkit-scrollbar-thumb {
               line-height: 30px;
             }
             span:first-child {
-              color: rgb(101, 104, 115);
+              color: #fff;
               margin-right: 10px;
               vertical-align: middle;
             }
@@ -699,9 +699,9 @@ textarea::-webkit-scrollbar-thumb {
       .boxinput {
         width: 50px;
         height: 50px;
-        background-color: rgb(66, 70, 86);
+        background-color: rgba(66, 70, 86, 0.534);
         border-radius: 15px;
-        border: 1px solid rgb(80, 85, 103);
+        // border: 1px solid rgba(118, 124, 147, 0.425);
         position: relative;
         cursor: pointer;
         img {
@@ -716,24 +716,25 @@ textarea::-webkit-scrollbar-thumb {
       .emoji {
         transition: 0.3s;
         &:hover {
-          background-color: rgb(46, 49, 61);
-          border: 1px solid rgb(71, 73, 82);
+          background-color: rgba(46, 49, 61, 0.5);
+          // border: 1px solid rgba(71, 73, 82, 0.5);
         }
       }
 
       .inputs {
         width: 80%;
         height: 50px;
-        background-color: rgb(66, 70, 86);
+        background-color: rgba(66, 70, 86, 0.408);
         border-radius: 15px;
-        border: 2px solid rgb(34, 135, 225);
+        border: 2px solid rgba(34, 136, 225, 0.414);
         padding: 10px;
         box-sizing: border-box;
         transition: 0.2s;
         font-size: 20px;
+        font-family:"";
         color: #fff;
         font-weight: 100;
-        margin: 0 20px;
+        // margin: 0 2px;
         &:focus {
           outline: none;
         }

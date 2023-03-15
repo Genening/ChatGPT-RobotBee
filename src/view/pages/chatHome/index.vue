@@ -3,13 +3,13 @@
     <!-- 左侧模型列表 -->
     <div class="chatLeft-Right" style="width:20%;">
       <div class="title">
-        <h1>学习助手</h1>
+        <h1>学习助手RobotBee</h1>
         <label @click="this.handleSetting" style="cursor:pointer;">
           <span class="iconfont icon-shezhi"></span>
         </label>
       </div>
       <div class="online-person" style="margin-top: 5%;"> 
-        <span class="onlin-text">模型列表</span>
+        <span class="onlin-text">模型选择</span>
         <input class="inputs" v-model="modelSearch"  style=" margin-top: 10px;" />
         <div class="s-wrapper">
           <div
@@ -345,9 +345,9 @@ export default {
  .inputs {
         width: 90%;
         height: 50px;
-        background-color: rgb(66, 70, 86);
+        background-color: rgba(66, 70, 86, 0.5);
         border-radius: 15px;
-        border: 2px solid rgb(34, 135, 225);
+        border: 2px solid rgba(34, 136, 225, 0.5);
         padding: 10px;
         box-sizing: border-box;
         transition: 0.2s;
@@ -384,7 +384,7 @@ export default {
         // margin-left: 35%;
         font-size: 18px;
         padding-left: 10px;
-        color: rgb(176, 178, 189);
+        color: rgb(237, 238, 244);
       }
       .s-wrapper {
         padding-left: 10px;

@@ -30,7 +30,7 @@ export default {
     return {
       menuList: [
         "icon-xinxi",
-        "icon-shezhi",
+        // "icon-shezhi",
       ],
       current: 0,
       imgUrl: require('@/assets/img/head.png')
