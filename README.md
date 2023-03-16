@@ -1,4 +1,6 @@
 # ChatGPT RobotBee
+![image](https://user-images.githubusercontent.com/37908189/225677418-f8c8afb6-0747-426e-80a5-446d2b51fb68.png)
+
 
 参考源仓库：[ChatGPT_JCM](https://github.com/202252197/ChatGPT_JCM)
 
