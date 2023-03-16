@@ -1,6 +1,6 @@
 # ChatGPT RobotBee
 
-源仓库：[ChatGPT_JCM](https://github.com/202252197/ChatGPT_JCM)
+参考源仓库：[ChatGPT_JCM](https://github.com/202252197/ChatGPT_JCM)
 
 ## 下载依赖包
 ```
@@ -17,6 +17,16 @@ npm run serve
 npm run build
 ```
 
+## electron预览
+```
+npm run start
+```
+
+## electron打包可执行exe文件
+```
+npm run packager
+```
+
 # 技术栈
 
 |  名称   | 版本  |
@@ -25,6 +35,7 @@ npm run build
 | element-ui  | 2.15.12 |
 | NodeJS  | 14.21.3 |
 | npm  | 6.14.18 |
+
 
 # 项目进度
 现在已经接入了以下功能
@@ -39,6 +50,3 @@ npm run build
 | Create transcription  | 录音功能 |
 | Create translation    | 待开发 |
 | .....    | 待开发 |
-
-# 发送指令（后期会增加更多指令玩法）
-:img 根据描述生成图片，例如: img:黑色的小狗
